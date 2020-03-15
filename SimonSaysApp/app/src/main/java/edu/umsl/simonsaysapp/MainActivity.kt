@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val fourColors = arrayOf("Green", "Yellow", "Blue", "Red")
         val allColors: ArrayList<String> = arrayListOf(fourColors[random])
         val start = findViewById<Button>(R.id.startBtn)
-        val activitiesArray = arrayOf(MainGame::class.java, Yellow::class.java, Blue::class.java, Red::class.java)
+        val activitiesArray = arrayOf(MainGame::class.java)
 
         // Colors Simon says
         for(i in 0..3){
@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         // Start button used to begin game
         start.setOnClickListener {
-            val intent = Intent(this@MainActivity, activitiesArray[random])
+            val intent = Intent(this@MainActivity, activitiesArray[0])
             intent.putStringArrayListExtra("colors", allColors)
             intent.putExtra("count", 0)
             intent.putExtra("score", 0)
