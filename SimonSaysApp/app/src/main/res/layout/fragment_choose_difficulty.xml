@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#BCB5C8">
+
+    <EditText
+        android:id="@+id/_nameHolder"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Enter your name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/submitBtn"
+        android:text="Submit"
+        android:background="#6FB5EC"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/easyBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_nameHolder" />
+
+    <Button
+        android:id="@+id/easyBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="#1CE116"
+        android:text="Easy"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/mediumBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/_nameHolder"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/mediumBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Medium"
+        android:background="#EDD925"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/hardBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/easyBtn"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/hardBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Hard"
+        android:background="#E91E63"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mediumBtn"
+        android:visibility="invisible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
