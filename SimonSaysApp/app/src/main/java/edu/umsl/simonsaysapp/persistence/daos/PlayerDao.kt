@@ -10,6 +10,6 @@ interface PlayerDao {
     @Insert
     suspend fun addPlayer(player: PlayerEntitiy)
 
-    @Query("SELECT * FROM players ORDER BY score DESC")
+    @Query("SELECT * FROM players ORDER BY score DESC LIMIT 10")
     suspend fun fetchPlayers(): List<PlayerEntitiy>
 }
